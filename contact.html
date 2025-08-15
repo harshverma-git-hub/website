@@ -17,7 +17,7 @@
     <link
         href="https://fonts.googleapis.com/css2?family=EB+Garamond:ital,wght@0,400..800;1,400..800&family=Playwrite+AU+QLD:wght@100..400&display=swap"
         rel="stylesheet">
-    <title>Website</title>
+    <title>Contact Page</title>
 </head>
 
 <body>
@@ -41,27 +41,42 @@
             </div>
         </nav>
     </header>
-
-    <!-- Hero Section -->
+<!-- Hero Section -->
     <section class="hero-section">
         <!-- Hero Section Left-->
-        <div class="hero-section-left">
-            <h1>Hello, I'm a <span class="heading-highlight">WEB DEVELOPER</span></h1>
-            <p>I am an aspring <span class="highlight">Full Stack JavaScript Developer.</span></p>
-            <p>who is currently working as a <span class="highlight">Freelancer</span> for <span
-                    class="highlight">National and International Clients.</span></p>
-        </div>
-        <!-- Hero Section Right-->
-        <div class="hero-section-right">
-            <img src="./assets/avatar.webp" alt="Avatar">
-            <button onclick="window.location.href='./contact.html'">Chat with me</button>
-        </div>
+        <div class="contact-container">
+                   <h1>Contact Us</h1>
+        <p>Have questions, suggestions, or feedback? Fill out the form below or reach out through the details provided.
+        </p>
+
+        <div class="contact-info">
+            <a href="mailto:mr.harshvermateam@gmail.com">📧 mr.harshvermateam@gmail.com</a>
+            <a href="tel:+917078840862">📞 +91 7078840862</a>
+            <a href="https://github.com/harshverma-git-hub" target="_blank">💻 GitHub</a>
+            <a href="https://www.linkedin.com/in/harsh-verma-profile/" target="_blank">🔗 LinkedIn</a>
+            </div>
+
+            <form action="#" method="post">
+            <label for="name">Your Name</label>
+            <input type="text" id="name" name="name" placeholder="Enter your name" required>
+
+            <label for="email">Your Email</label>
+            <input type="email" id="email" name="email" placeholder="Enter your email" required>
+
+            <label for="message">Your Message</label>
+            <textarea id="message" name="message" placeholder="Write your message here..." required></textarea>
+
+            <button type="submit">Send Message</button>
+        </form>
+    </div>
+
     </section>
 
+        
     <!-- Footer -->
     <footer class="footer">
         <p>&copy; All rights reserved</p>
-         <ul class="social-links">
+        <ul class="social-links">
             <li>
                 <a href="https://github.com/harshverma-git-hub"><i class="fa-brands fa-github"></i>
                 </a>
@@ -74,7 +89,6 @@
             </li>
         </ul>
     </footer>
-
 </body>
 
 </html>

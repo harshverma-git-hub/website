@@ -30,6 +30,9 @@ color: green;
 font-size: xx-large;
 font-weight: 800;
 }
+p{
+    text-align: justify;
+}
 body{
   background-color: azure;
   height: 100vh;
@@ -52,16 +55,26 @@ a{
 }
 .nav{
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     padding: 10px;
 }
-.logo{
-    font-weight: 700;
-    font-size: 1.5rem;
+.logo {
+    flex:1;
+    background: inherit;       /* Take parent’s background */
+    padding: 10px;              /* Space around logo */
+    height: 50px;               /* Adjust based on your design */
+}
+
+.logo img {
+    max-height: 100%;          /* Fit inside the div’s height */
+    max-width: 100%;           /* Prevent overflow */
+    object-fit: cover;       /* Keep aspect ratio */
+    background: transparent;   /* Remove any image background */
 }
 .nav-list{
+    flex:1;
     display: flex;
-    gap:30px;
+    gap:20px;
     justify-content: space-around;
     align-items: center;
     font-weight: 600;
@@ -71,10 +84,12 @@ a{
 
 }
 .search{
+    flex: 2;
     display: flex;
     gap:10px;
 }
 .hero-section{
+    margin: 10px 0px;
     display: flex;
     justify-content: space-around;
 }
@@ -83,12 +98,20 @@ a{
     flex-direction: column;
     justify-content: center;
     padding: 20px;
+    flex:3;
 }
 .hero-section-right{
     display: flex;
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
+    flex:2;
+}
+.hero-section-right img {
+    max-width: 100%; /* Make image responsive */
+    height: auto;
+    border-radius: 50%; /* Makes image circular if square */
+    margin-bottom: 15px;
 }
 
 .footer{
@@ -103,3 +126,70 @@ a{
     display: flex;
     gap:30px;
 }
+
+
+/* About Page */
+.points {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns */
+    grid-template-rows: repeat(2, auto);   /* 2 rows */
+    gap: 15px; /* space between items */
+    list-style: none; /* remove default bullet points */
+    padding: 10px;
+    margin: 10px;
+}
+.points li {
+    background: #f9f9f9; /* light background */
+    border-radius: 8px;
+    padding: 12px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.highlight {
+    font-weight: bold;
+    color: #1b1b1b; /* blue for emphasis */
+}
+
+/* Contact Page */
+ .contact-container {
+    overflow: scroll;
+            max-width: 800px;
+            background: white;
+            margin: 50px auto;
+            padding: 25px;
+            border-radius: 8px;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+        }
+        .contact-info {
+            margin-top: 20px;
+        }
+
+        .contact-info a {
+            display: block;
+            color: #007bff;
+            text-decoration: none;
+            margin: 5px 0;
+        }
+
+        form {
+            margin-top: 30px;
+        }
+
+        label {
+            display: block;
+            margin: 8px 0 4px;
+            color: #333;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+            font-size: 14px;
+        }
+
+        textarea {
+            resize: none;
+            height: 100px;
+        }
